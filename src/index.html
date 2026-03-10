@@ -1,12 +1,53 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <title>Book Catalog</title>
-</head>
 <body>
 
-<div id="app"></div>
-    Hello
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon"></div>
+    <div>
+      <div class="logo-title">The Library</div>
+      <div class="logo-subtitle">Discover your next favorite book</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Discover Your Next Great Read</h1>
+  <p>
+    Search millions of books, build your personal library,
+    and never lose track of what to read next
+  </p>
+
+  <form class="search-form">
+    <input type="text" placeholder="Search for books by title or author..." />
+    <button>Search</button>
+  </form>
+</section>
+
+<div class="page">
+
+  <main class="main">
+    <!-- book cards -->
+  </main>
+
+  <aside class="favorites">
+    <div class="favorites-title">
+
+      <div class="favorites-icon"></div>
+
+      <div>
+        <h2>Favorites</h2>
+        <div class="favorites-count"></div>
+      </div>
+
+    </div>
+    
+    <div class="favorites-list"></div>
+  </aside>
+
+</div>
+
+<footer class="footer">
+  Powered by Open Library
+</footer>
+
 </body>
-</html>
