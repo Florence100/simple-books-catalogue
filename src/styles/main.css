@@ -1,20 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@import './base/reset.css';
+@import './base/variables.css';
+@import './base/typography.css';
 
-:root {
-    --white: #ffffff;
-    --green: #27694d;
-    --yellow: #daa520;
-    --red: #ef4444;
-    --brown: #383129;
-    --black: #2a2622;
+@import './layout/container.css';
+@import './layout/header.css';
+@import './layout/footer.css';
 
-    --title: #2b2622;
-    --text: #7c736a;
-    --border: #E7E2DA;
+@import './components/button.css';
+@import './components/search-form.css';
+@import './components/book-card.css';
+@import './components/favorites.css';
 
-    --background: #f7f4ef;
-    --card: #fcfaf7;
-    --secondary: #eeebe4;
-    --shadow: #c4b8a8;
-    --favorite: #eaf0ed;
-}
+@import './pages/home.css';
+
+@import './themes/dark.css';
