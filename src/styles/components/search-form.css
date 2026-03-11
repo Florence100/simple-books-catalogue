@@ -3,23 +3,3 @@
     display: flex;
     gap: 5px;
 }
-
-.search-form button {
-    background-color: var(--green);
-    color: var(--secondary);
-    border-radius: 8px;
-    padding: 5px 20px;
-    cursor: pointer;
-}
-
-.search-form input {
-    flex-grow: 1;
-    background-color: var(--white);
-    padding: 5px 40px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background-image: url('../../assets/icons/search.svg');
-    background-position: 15px;
-    background-repeat: no-repeat;
-    font-size: 14px;
-}

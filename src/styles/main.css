@@ -8,9 +8,9 @@
 @import './layout/footer.css';
 
 @import './components/button.css';
+@import './components/input.css';
 @import './components/search-form.css';
 @import './components/book-card.css';
-@import './components/book-card-favorite.css';
 @import './components/favorites.css';
 
 @import './pages/home.css';
