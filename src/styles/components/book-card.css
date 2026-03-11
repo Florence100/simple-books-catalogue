@@ -1,0 +1,103 @@
+.book-card {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px var(--shadow);
+    background: var(--white);
+    position: relative;
+}
+
+.book-card img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1.5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.book-card .book-info {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.book-card .book-info .book-title {
+    font-weight: 600;
+    font-family: var(--font-title);
+    color: var(--title);
+    font-size: 16px;
+}
+
+.book-card .favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.book-card .favorite-btn svg {
+    stroke: var(--text);
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+}
+
+.book-card .favorite-btn svg:hover,
+.book-card .favorite-btn.cliked svg {
+    stroke: var(--red);
+    fill: var(--red);
+}
+
+
+/* favorite section
+
+.book-card_favorite {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.book-card_favorite img {
+    max-width: 25%;
+    aspect-ratio: 1 / 1.5;
+    border-radius: 8px;
+}
+
+.book-card_favorite .book-info {
+    font-size: 12px;
+}
+
+.book-card_favorite .book-info .book-title {
+    font-weight: 600;
+    font-family: var(--font-title);
+    color: var(--title);
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.book-card_favorite .favorite-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.book-card_favorite .favorite-btn.cliked svg {
+    stroke: var(--red);
+    fill: var(--red);
+}
+
+.book-card_favorite .favorite-btn.cliked svg:hover {
+    stroke: var(--text);
+    fill: none;
+} */

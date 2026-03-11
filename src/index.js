@@ -1,3 +1,3 @@
 import './styles/main.css'
 
-console.log('Book catalog started')
+console.log('Book catalog started');
