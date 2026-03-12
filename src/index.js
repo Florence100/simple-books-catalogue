@@ -1,3 +1,5 @@
-import './styles/main.css'
+import './styles/main.css';
 
-console.log('Book catalog started');
+import { initSearch } from  './handlers/searchHandler';
+
+initSearch();
