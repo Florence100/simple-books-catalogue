@@ -1,4 +1,4 @@
-.body {
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,15 +13,14 @@
 
 .page .container {
     width: 100%;
-    height: fit-content;
     display: grid;
-    grid-template-columns: auto 220px;
+    grid-template-columns: 1fr 220px;
     gap: 15px;
 }
 
 .main {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 10px;
     height: fit-content;
 }
