@@ -1,5 +1,6 @@
 import { searchBooks } from '../services/openLibraryApi';
 import renderBooks from '../ui/renderBooks';
+import { renderLoading, renderEmptyQuery, renderNotFound, renderError } from '../ui/renderState';
 
 export function initSearchHandler() {
     const searchForm = document.querySelector('.search-form');
@@ -10,10 +11,24 @@ export function initSearchHandler() {
         const input = searchForm.querySelector('.search-input');
         const query = input.value.trim();
 
-        if (!query) return;
+        if (!query) {
+            renderEmptyQuery();
+            return;
+        }
 
-        const books = await searchBooks(query);
+        try {
+            renderLoading();
 
-        renderBooks(books);
+            const books = await searchBooks(query);
+
+            if (!books.length) {
+                renderNotFound();
+                return;
+            }
+
+            renderBooks(books);
+        } catch(err) {
+            renderError();
+        }
     })
 }
