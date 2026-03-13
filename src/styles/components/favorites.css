@@ -6,10 +6,17 @@
 
 .favorites-header {
     display: flex;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
     line-height: 0.8;
     border-bottom: 1px solid var(--border);
     padding: 10px;
+}
+
+.favorites-header > div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .favorites-icon {
@@ -36,4 +43,45 @@
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .favorites {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        display: none;
+        border-radius: 0;
+        z-index: 100;
+    }
+
+    .favorites-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .close-btn {
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .favorites-header {
+        padding: 10px 20px;
+        line-height: 1.4;
+    }
+
+    .favorites-header > div {
+        gap: 10px;
+    }
+
+    .favorites-header span {
+        font-size: 14px;
+    }
 }

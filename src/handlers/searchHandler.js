@@ -2,7 +2,7 @@ import { searchBooks } from '../services/openLibraryApi';
 import renderBooks from '../ui/renderBooks';
 import { renderLoading, renderEmptyQuery, renderNotFound, renderError } from '../ui/renderState';
 
-export function initSearchHandler() {
+export default function initSearchHandler() {
     const searchForm = document.querySelector('.search-form');
 
     searchForm.addEventListener('submit', async (e) => {

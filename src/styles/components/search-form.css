@@ -1,5 +1,6 @@
 .search-form {
     width: 100%;
+    max-width: 100vw;
     display: flex;
     gap: 5px;
 }

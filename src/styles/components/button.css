@@ -41,3 +41,37 @@
     stroke: var(--red);
     fill: var(--red);
 }
+
+.open-favorite-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/icons/heart.svg');
+    background-repeat: none;
+    background-size: cover;
+    margin: 10px;
+    display: none;
+}
+
+.close-btn {
+    font-size: 35px;
+    display: none;
+    font-weight: bold;
+    color: var(--text);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .search-btn {
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .open-favorite-btn {
+        display: block;
+    }
+}
