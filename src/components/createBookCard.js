@@ -1,6 +1,10 @@
-export default function createBookCard(book) {
+import { addClickHandler } from '../handlers/favoriteHandler';
+import { isInFavorite } from '../state/favoritesState';
+import createBookDto from '../dto/bookDto';
+
+export default function createBookCard(book, isFaforiteCard=false) {
     const card = document.createElement('article');
-    card.className = 'book-card';
+    card.className = isFaforiteCard ? 'book-card book-card--favorite' : 'book-card';
 
     const coverId = book.cover_i || '';
 
@@ -38,8 +42,24 @@ export default function createBookCard(book) {
     bookInfo.appendChild(publishYear);
 
     const favoriteBtn = document.createElement('button');
-    favoriteBtn.className='favorite-btn favorite-btn--card';
-    favoriteBtn.setAttribute('aria-label', 'Add to favorites');
+
+    favoriteBtn.classList.add('book-favorite-toggle');
+
+    if (!isFaforiteCard) {
+        favoriteBtn.classList.add('book-favorite-toggle--page');
+    }
+
+    const isFavorite = isInFavorite(book);
+
+    isFavorite && favoriteBtn.classList.add('active');
+    
+    favoriteBtn.setAttribute('aria-label', isFavorite? 'Remove from favorites' : 'Add to favorites');
+
+    const bookDto = createBookDto(book);
+
+    favoriteBtn.setAttribute('data-book', JSON.stringify(bookDto));
+    favoriteBtn.setAttribute('data-key', book.key);
+
     favoriteBtn.innerHTML = `
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path 
@@ -50,6 +70,8 @@ export default function createBookCard(book) {
             />
         </svg>
     `;
+
+    addClickHandler(favoriteBtn);
 
     card.appendChild(cover);
     card.appendChild(bookInfo);

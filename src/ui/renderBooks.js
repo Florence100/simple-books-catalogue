@@ -1,4 +1,4 @@
-import createBookCard from './createBookCard';
+import createBookCard from '../components/createBookCard';
 
 export default function renderBooks(books) {
     const container = document.querySelector('.books-list');

@@ -1,7 +1,7 @@
-import { searchBooks } from "../api/openLibrary";
-import renderBooks from "../ui/renderBooks";
+import { searchBooks } from '../services/openLibraryApi';
+import renderBooks from '../ui/renderBooks';
 
-export function initSearch() {
+export function initSearchHandler() {
     const searchForm = document.querySelector('.search-form');
 
     searchForm.addEventListener('submit', async (e) => {
@@ -13,8 +13,6 @@ export function initSearch() {
         if (!query) return;
 
         const books = await searchBooks(query);
-
-        console.log(books)
 
         renderBooks(books);
     })

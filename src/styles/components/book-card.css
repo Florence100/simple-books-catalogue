@@ -28,6 +28,7 @@
 .book-card .book-info {
     padding: 10px;
     font-size: 14px;
+    flex-grow: 1;
 }
 
 .book-card .book-title {

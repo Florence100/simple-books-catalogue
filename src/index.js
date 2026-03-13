@@ -1,5 +1,9 @@
 import './styles/main.css';
 
-import { initSearch } from  './handlers/searchHandler';
+import { initSearchHandler } from  './handlers/searchHandler';
+import renderFavoriteBooks from './ui/renderFavoriteBooks';
+import renderFavoriteCount from './ui/renderFavoriteCount';
 
-initSearch();
+initSearchHandler();
+renderFavoriteBooks();
+renderFavoriteCount();
