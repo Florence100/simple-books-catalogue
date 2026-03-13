@@ -1,0 +1,67 @@
+.book-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px var(--shadow);
+    background: var(--white);
+}
+
+.book-card .book-cover,
+.book-card .fallback {
+    width: 100%;
+    aspect-ratio: 1 / 1.5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.book-card .fallback {
+    background: linear-gradient(to bottom right, #ffffff, #d0c5b7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.book-card .book-info {
+    padding: 10px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.book-card .book-title {
+    font-weight: 600;
+    font-family: var(--font-title);
+    color: var(--title);
+    font-size: 16px;
+}
+
+.book-card--favorite {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+}
+
+.book-card--favorite .book-cover,
+.book-card--favorite .fallback {
+    max-width: 25%;
+    border-radius: 8px;
+}
+
+.book-card--favorite .book-info {
+    padding: 0;
+    font-size: 12px;
+}
+
+.book-card--favorite .book-title {
+    font-size: 14px;
+    line-height: 1.2;
+}
+

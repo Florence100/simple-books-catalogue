@@ -1,0 +1,23 @@
+.search-input {
+    flex-grow: 1;
+    background-color: var(--white);
+    padding: 5px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-image: url('../../assets/icons/search.svg');
+    background-position: 15px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+.search-input:focus-visible {
+    outline: 2px solid var(--yellow);
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .search-input {
+        padding: 5px 10px;
+        background-image: none;
+    }
+}

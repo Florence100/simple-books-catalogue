@@ -1,0 +1,14 @@
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid var(--border);
+}
+
+.footer a {
+    color: var(--green);
+}
+
+.footer a:focus-visible {
+    outline: 2px solid var(--yellow);
+    outline-offset: 2px;
+}

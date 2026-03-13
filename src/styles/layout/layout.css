@@ -1,0 +1,56 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+body::selection {
+  background-color: var(--yellow);
+  color: var(--brown);
+  text-shadow: none;
+}
+
+.page {
+    min-height: 50%;
+}
+
+.page .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 15px;
+    height: 100%;
+}
+
+.main {
+    position: relative;
+}
+
+.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 10px;
+    height: 100%;
+}
+
+.state {
+    position: absolute;
+    inset: -30px 0;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        gap: 20px;
+    }
+
+    .page .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .books-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
