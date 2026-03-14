@@ -54,6 +54,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './src/index.html',
+        favicon: './src/assets/favicon.ico',
         minify: isProd
       }),
 

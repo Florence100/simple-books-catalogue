@@ -7,6 +7,9 @@ export default function createBookCard(book, isFaforiteCard=false) {
     card.className = isFaforiteCard ? 'book-card book-card--favorite' : 'book-card';
 
     const coverId = book.cover_i || '';
+    const authors = Array.isArray(book.author_name)
+        ? book.author_name.slice(0, 2).join(', ')
+        : book.author_name || '';
 
     let cover;
 
@@ -32,7 +35,13 @@ export default function createBookCard(book, isFaforiteCard=false) {
     title.textContent = book.title || '';
 
     bookAuthor.className = 'book-author';
-    bookAuthor.textContent = book.author_name || '';
+    bookAuthor.textContent =
+        book.author_name?.length > 2
+            ? `${authors} et al.`
+            : authors;
+    if (book.author_name?.length > 2) {
+        bookAuthor.dataset.tooltip = book.author_name.join(', ') || '';
+    }
 
     publishYear.className = 'book-publish';
     publishYear.textContent = book.first_publish_year || '';
