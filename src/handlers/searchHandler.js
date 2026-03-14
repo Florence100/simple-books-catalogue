@@ -16,8 +16,11 @@ export default function initSearchHandler() {
             return;
         }
 
+        const searchBtn = searchForm.querySelector('.search-btn');
+
         try {
             renderLoading();
+            searchBtn.setAttribute('disabled', '');
 
             const books = await searchBooks(query);
 
@@ -29,6 +32,8 @@ export default function initSearchHandler() {
             renderBooks(books);
         } catch(err) {
             renderError();
+        } finally {
+            searchBtn.removeAttribute('disabled');
         }
     })
 }
